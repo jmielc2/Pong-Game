@@ -6,8 +6,21 @@ set(CXX_EXTENSIONS OFF)
 
 project(pong VERSION 1.0)
 
+add_executable(${PROJECT_NAME} Main.cpp)
+
+
 add_subdirectory(external/SFML)
 
-add_executable(pong Main.cpp)
+target_include_directories(${PROJECT_NAME} 
+    PUBLIC external/SFML/include
+)
+
+target_link_directories(${PROJECT_NAME}
+    PRIVATE external/SFML/lib/
+)
+
+target_link_libraries(${PROJECT_NAME}
+    sfml-graphics
+)
 
 set(EXECUTABLE_OUTPUT_PATH ../bin)
