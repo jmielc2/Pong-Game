@@ -6,7 +6,9 @@ set(CXX_EXTENSIONS OFF)
 
 project(pong VERSION 1.0)
 
-add_executable(${PROJECT_NAME} Main.cpp stdafx.cpp)
+add_executable(${PROJECT_NAME} Main.cpp stdafx.cpp
+    Controllers/App.cpp
+)
 
 add_subdirectory(external/SFML)
 
