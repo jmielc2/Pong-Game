@@ -6,6 +6,8 @@ set(CXX_EXTENSIONS OFF)
 
 project(pong VERSION 1.0)
 
+add_subdirectory(external/SFML)
+
 add_executable(pong Main.cpp)
 
 set(EXECUTABLE_OUTPUT_PATH ../bin)
