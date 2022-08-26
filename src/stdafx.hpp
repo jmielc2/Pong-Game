@@ -20,5 +20,6 @@
 #include <set>
 #include <unordered_set>
 #include <string>
+#include <SFML/Graphics.hpp>
 
 #endif
