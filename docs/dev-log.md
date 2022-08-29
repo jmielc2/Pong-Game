@@ -1,5 +1,10 @@
 # PONG GAME - Developer Log
 
+## 8/29/2022 - Jacob Mielczarek
+<p>
+Created and implemented the app icon and tested the current framerate.
+</p>
+
 ## 8/26/2022 - Jacob Mielczarek
 <p>
 Began UML design of App class. Goal is to allow for easy scene management and updating with minimal use of switch and if/else blocks.

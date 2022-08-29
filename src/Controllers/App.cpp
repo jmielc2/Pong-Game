@@ -66,9 +66,7 @@ void App::init() {
     App::impl->clock.restart();
 }
 
-void App::update() {
-    LOG("Update App");
-    
+void App::update() {    
     // Get Delta Time
     sf::Int32 curTime = App::impl->clock.getElapsedTime().asMilliseconds();
     App::impl->deltaTime = curTime - App::impl->prevTime;
@@ -82,11 +80,11 @@ void App::update() {
 }
 
 void App::render() {
-    LOG("Render App");
     App::impl->window.clear();
 
     // TODO: Draw Strategy Here
-
+    
+    LOG("Delta Time: " + std::to_string(App::impl->deltaTime) + " ms");
     App::impl->window.display();
 }
 
