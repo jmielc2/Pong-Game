@@ -22,6 +22,7 @@
 #include <set>
 #include <unordered_set>
 #include <string>
+#include <filesystem>
 
 #include "Controllers/App.hpp"
 

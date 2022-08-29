@@ -57,8 +57,13 @@ void App::quit() {
 void App::init() {
     LOG("Initializing App");
     App::impl->window.setFramerateLimit(60);
+
+    std::filesystem::path icon("assets/icon.png");
+    sf::Image iconFile;
+    if (iconFile.loadFromFile(std::filesystem::path("assets/icon.png"))) {
+        App::impl->window.setIcon(iconFile.getSize(), iconFile.getPixelsPtr());
+    }
     App::impl->clock.restart();
-    return;
 }
 
 void App::update() {
