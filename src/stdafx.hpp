@@ -4,8 +4,8 @@
 #define STDAFX_H 1
 
 #define DEBUG 1
-#define WINDOW_WIDTH 700
-#define WINDOW_HEIGHT 800
+#define WINDOW_WIDTH 950
+#define WINDOW_HEIGHT 550
 
 #if DEBUG
     #include <iostream>
@@ -24,8 +24,8 @@
 #include <string>
 #include <filesystem>
 
-#include "Controllers/App.hpp"
-
 #include <SFML/Graphics.hpp>
+
+#include "Controllers/App.hpp"
 
 #endif

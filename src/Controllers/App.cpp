@@ -9,6 +9,7 @@ public:
     static sf::Event event;
     static sf::Clock clock;
     static sf::Int32 deltaTime, prevTime;
+    static std::unordered_map<App::Scene, Scene*> scenes;
 
     Impl() {};
 };
@@ -16,11 +17,12 @@ public:
 App::Scene App::Impl::scene = App::Scene::MAIN_MENU;
 App::State App::Impl::state = App::State::RUNNING;
 App App::Impl::app;
-sf::RenderWindow App::Impl::window(sf::VideoMode(sf::Vector2u(WINDOW_HEIGHT, WINDOW_WIDTH)), "Pong", sf::Style::Close);
+sf::RenderWindow App::Impl::window(sf::VideoMode(sf::Vector2u(WINDOW_WIDTH, WINDOW_HEIGHT)), "Pong", sf::Style::Close);
 sf::Event App::Impl::event;
 sf::Clock App::Impl::clock;
 sf::Int32 App::Impl::deltaTime;
 sf::Int32 App::Impl::prevTime = 0;
+std::unordered_map<App::Scene, Scene*> scenes;
 
 std::unique_ptr<App::Impl> App::impl(new App::Impl());
 
@@ -58,11 +60,16 @@ void App::init() {
     LOG("Initializing App");
     App::impl->window.setFramerateLimit(60);
 
-    std::filesystem::path icon("assets/icon.png");
+    // Load App Icon
+    std::filesystem::path iconPath("assets/icon.png");
     sf::Image iconFile;
-    if (iconFile.loadFromFile(std::filesystem::path("assets/icon.png"))) {
+    if (iconFile.loadFromFile(iconPath)) {
         App::impl->window.setIcon(iconFile.getSize(), iconFile.getPixelsPtr());
     }
+
+    // Load App Scenes
+    
+
     App::impl->clock.restart();
 }
 

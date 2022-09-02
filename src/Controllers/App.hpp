@@ -4,6 +4,7 @@
 #define APP_HPP 1
 
 #include "../stdafx.hpp"
+#include "../Tools/SceneFactory.hpp"
 
 class App {
 public:

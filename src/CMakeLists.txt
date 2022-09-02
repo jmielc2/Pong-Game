@@ -27,14 +27,14 @@ target_link_libraries(${PROJECT_NAME}
 set(EXECUTABLE_OUTPUT_PATH ../bin)
 
 set (source "${CMAKE_SOURCE_DIR}/../assets")
-message(${source})
+# message(${source})
 
 set (destination "${EXECUTABLE_OUTPUT_PATH}/assets")
-message(${destination})
+# message(${destination})
 
 add_custom_command(
     TARGET ${PROJECT_NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E create_symlink ${source} ${destination} 
     DEPENDS ${destination}
-    COMMENT "symbolic link resources folder from ${source} => ${destination}"
+    COMMENT "Created symbolic link from ${source} => ${destination}"
 )
