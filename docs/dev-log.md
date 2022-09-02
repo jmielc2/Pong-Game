@@ -1,5 +1,14 @@
 # PONG GAME - Developer Log
 
+## 9/2/2022 - Jacob Mielczarek
+<p>
+Started implementing the scene switching. Created a Factory class that abstracts the creation of the different scenes. At the moment, I've only added three scenes: Main Menu, Game Scene, and End Scene (once the game is over). All three inherit from the abstract class Scene.
+<br>
+At the moment, the way I see this working is that a call can be made to the App class to the switch the scene. All the pages are created and loaded when the application initializes, so all that's left to do is to run the close and open functions for the scenes as they switch, then switch the Scene pointer to the new scene. That way, we can avoid having to worry about switch statements choosing which scene to update, close, render, reset, etc. I believe the design patterns being used here are Factory and Strategy.
+<br>
+Oh, and I also found a font that feels similar to the original Pong.
+</p>
+
 ## 8/29/2022 - Jacob Mielczarek
 <p>
 Created and implemented the app icon and tested the current framerate.
