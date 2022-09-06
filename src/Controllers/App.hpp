@@ -4,7 +4,6 @@
 #define APP_HPP 1
 
 #include "../stdafx.hpp"
-#include "../Tools/SceneFactory.hpp"
 
 class App {
 public:
@@ -31,6 +30,7 @@ public:
     static void init();
     static void update();
     static void render();
+    static void pause();
 
 private:
     App();

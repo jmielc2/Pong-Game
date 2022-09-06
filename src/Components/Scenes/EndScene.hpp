@@ -6,13 +6,14 @@
 #include "Scene.hpp"
 #include "../../stdafx.hpp"
 
-class EndScene : public Scene {
+class EndScene : public stp::Scene {
 public:
     void update(sf::Int32 delta);
     void render();
     void reset();
     void pause();
     void close();
+    void open();
 
     EndScene();
 private:

@@ -2,6 +2,7 @@
 
 int main() {
     App::init();
+    LOG("-- STARTING APP UPDATE LOOP --");
     do {
         App::render();
         App::update();

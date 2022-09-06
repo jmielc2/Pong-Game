@@ -6,13 +6,14 @@
 #include "Scene.hpp"
 #include "../../stdafx.hpp"
 
-class GameScene : public Scene {
+class GameScene : public stp::Scene {
 public:
     void update(sf::Int32 delta);
     void render();
     void reset();
     void pause();
     void close();
+    void open();
 
     GameScene();
 private:

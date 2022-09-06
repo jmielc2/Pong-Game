@@ -6,13 +6,14 @@
 #include "Scene.hpp"
 #include "../../stdafx.hpp"
 
-class MainMenu : public Scene {
+class MainMenu : public stp::Scene {
 public:
     void update(sf::Int32 delta);
     void render();
     void reset();
     void pause();
     void close();
+    void open();
 
     MainMenu();
 private:

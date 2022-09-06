@@ -1,5 +1,15 @@
 # PONG GAME - Developer Log
 
+## 9/6/2022 - Jacob Mielczarek
+<p>
+Finished implementing scene switching. Have it roughly working but may need to incorporate changes in the future.
+Switched the Factory class to a Manager class that houses the scenes. No need for a factory that only needs
+to create something once.
+<br>
+Now I need to start figuring out how to manage rendering. For example, lets say I want to render text. It would
+be a waste to read and initialize a sf::Text object for each page, so I feel it'd be better to have the App control general assets such as font. I need to think of a way to communicate between the two that doesn't complicate things.
+</p>
+
 ## 9/2/2022 - Jacob Mielczarek
 <p>
 Started implementing the scene switching. Created a Factory class that abstracts the creation of the different scenes. At the moment, I've only added three scenes: Main Menu, Game Scene, and End Scene (once the game is over). All three inherit from the abstract class Scene.

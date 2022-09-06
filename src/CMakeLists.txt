@@ -8,6 +8,7 @@ project(pong VERSION 1.0)
 
 add_executable(${PROJECT_NAME} Main.cpp stdafx.cpp
     Controllers/App.cpp
+    Components/Scenes/MainMenu.cpp Components/Scenes/GameScene.cpp Components/Scenes/EndScene.cpp
 )
 
 add_subdirectory(external/SFML)
@@ -27,10 +28,8 @@ target_link_libraries(${PROJECT_NAME}
 set(EXECUTABLE_OUTPUT_PATH ../bin)
 
 set (source "${CMAKE_SOURCE_DIR}/../assets")
-# message(${source})
 
 set (destination "${EXECUTABLE_OUTPUT_PATH}/assets")
-# message(${destination})
 
 add_custom_command(
     TARGET ${PROJECT_NAME} POST_BUILD
