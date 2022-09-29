@@ -22,7 +22,7 @@ target_link_directories(${PROJECT_NAME}
 )
 
 target_link_libraries(${PROJECT_NAME}
-    sfml-graphics sfml-system sfml-window
+    sfml-graphics sfml-system sfml-window sfml-audio
 )
 
 set(EXECUTABLE_OUTPUT_PATH ../bin)

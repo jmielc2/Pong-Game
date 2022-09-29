@@ -1,4 +1,5 @@
 #include "GameScene.hpp"
+#include "../../stdafx.hpp"
 
 class GameScene::Impl {
 

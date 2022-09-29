@@ -4,7 +4,6 @@
 #define MAIN_MENU_HPP 1
 
 #include "Scene.hpp"
-#include "../../stdafx.hpp"
 
 class MainMenu : public stp::Scene {
 public:

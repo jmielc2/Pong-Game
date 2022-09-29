@@ -3,8 +3,6 @@
 #ifndef APP_HPP
 #define APP_HPP 1
 
-#include "../stdafx.hpp"
-
 class App {
 public:
     enum Scene {MAIN_MENU, GAME, END_GAME};

@@ -1,3 +1,4 @@
+#include "../stdafx.hpp"
 #include "App.hpp"
 #include "../Components/Scenes/MainMenu.hpp"
 #include "../Components/Scenes/GameScene.hpp"

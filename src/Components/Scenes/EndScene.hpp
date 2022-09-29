@@ -4,7 +4,6 @@
 #define END_SCENE_HPP 1
 
 #include "Scene.hpp"
-#include "../../stdafx.hpp"
 
 class EndScene : public stp::Scene {
 public:

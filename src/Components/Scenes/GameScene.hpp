@@ -4,7 +4,6 @@
 #define GAME_SCENE_HPP 1
 
 #include "Scene.hpp"
-#include "../../stdafx.hpp"
 
 class GameScene : public stp::Scene {
 public:
